@@ -12,15 +12,20 @@
 <body>
     <form class="js-battle-form" action="">
         <select class="js-select">
+            <option hidden value="0">Selecciona la raza con la que vas a jugar:</option>
             <option value="1">Pelosos</option>
             <option value="2">Sureños buenos</option>
             <option value="3">Enanos</option>
             <option value="4">Númenóreanos</option>
             <option value="5">Elfos</option>
         </select>
-        <button class="js-btn">Batalla</button>
+        <button class="js-battle-btn">Batalla</button>
+        <button class="js-reset-btn collapsed">Reiniciar juego</button>
     </form>
     <p class="js-text-result">Comienza la batalla.</p>
+    <p class="js-user-count"></p>
+    <p class="js-comp-count"></p>
+    <p class="js-winner"></p>
     <script src="./js/main.js"></script>
 </body>
 
