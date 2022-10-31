@@ -10,22 +10,37 @@
 </head>
 
 <body>
-    <form class="js-battle-form" action="">
-        <select class="js-select">
-            <option hidden value="0">Selecciona la raza con la que vas a jugar:</option>
-            <option value="1">Pelosos</option>
-            <option value="2">Sureños buenos</option>
-            <option value="3">Enanos</option>
-            <option value="4">Númenóreanos</option>
-            <option value="5">Elfos</option>
-        </select>
-        <button class="js-battle-btn">Batalla</button>
-        <button class="js-reset-btn collapsed">Reiniciar juego</button>
-    </form>
-    <p class="js-text-result">Comienza la batalla.</p>
-    <p class="js-user-count"></p>
-    <p class="js-comp-count"></p>
-    <p class="js-winner"></p>
+    <header class="header">
+        <h1 class="header-h1">Los Anillos de Poder</h1>
+    </header>
+    <main>
+        <section class="exp">
+            <p class="text-exp">La Tierra Media está en guerra! En ella lucharán razas leales a Sauron contra otras
+                bondadosas
+                que
+                no
+                quieren que el mal reine sobre sus tierras.</p>
+            <p class="text-user">Eres un jugador del ejército del bien, no olvides tu misión de ganar la batalla</p>
+        </section>
+        <section class="battle">
+            <form class="js-battle-form" action="">
+                <select class="js-select">
+                    <option hidden value="0">Selecciona la raza con la que vas a jugar:</option>
+                    <option value="1">Pelosos</option>
+                    <option value="2">Sureños buenos</option>
+                    <option value="3">Enanos</option>
+                    <option value="4">Númenóreanos</option>
+                    <option value="5">Elfos</option>
+                </select>
+                <button class="js-battle-btn">Batalla</button>
+                <button class="js-reset-btn collapsed">Reiniciar juego</button>
+            </form>
+            <p class="js-text-result">Comienza la batalla.</p>
+            <p class="js-user-count"></p>
+            <p class="js-comp-count"></p>
+            <p class="js-winner"></p>
+        </section>
+    </main>
     <script src="./js/main.js"></script>
 </body>
 
