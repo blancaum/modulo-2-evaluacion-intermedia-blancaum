@@ -36,6 +36,10 @@ let isGameEnded = false;
 /*END VARIABLES*/
 
 /***********FUNCTIONS***********/
+function setInnerHtml(element, newInnerHtml) {
+  element.innerHTML = newInnerHtml;
+}
+
 function getRace(name, strength) {
   return {
     name: name,
@@ -55,35 +59,38 @@ function getEvilRace() {
 
 function calculateBattle(raceEvil, raceGood) {
   if (raceEvil > raceGood) {
-    resultText.innerHTML =
-      'Ha ganado el Ejército del Mal! Vuelve a Intentarlo.';
+    setInnerHtml(
+      resultText,
+      'Ha ganado el Ejército del Mal! Vuelve a Intentarlo.'
+    );
     compCount++;
-    compText.innerHTML = `Puntuación del ordenador: ${compCount}`;
-    userText.innerHTML = `Puntuación de la usuaria: ${userCount}`;
+    setInnerHtml(compText, `Puntuación del ordenador: ${compCount}`);
+    setInnerHtml(userText, `Puntuación de la usuaria: ${userCount}`);
   } else if (raceEvil < raceGood) {
-    resultText.innerHTML = 'Ha ganado el Ejército del Bien! Enhorabuena.';
+    setInnerHtml(resultText, 'Ha ganado el Ejército del Bien! Enhorabuena.');
     userCount++;
-    compText.innerHTML = `Puntuación del ordenador: ${compCount}`;
-    userText.innerHTML = `Puntuación de la usuaria: ${userCount}`;
+    setInnerHtml(compText, `Puntuación del ordenador: ${compCount}`);
+    setInnerHtml(userText, `Puntuación de la usuaria: ${userCount}`);
   } else {
-    resultText.innerHTML = 'Empate';
-    compText.innerHTML = `Puntuación del ordenador: ${compCount}`;
-    userText.innerHTML = `Puntuación de la usuaria: ${userCount}`;
+    setInnerHtml(resultText, 'Empate');
+    setInnerHtml(compText, `Puntuación del ordenador: ${compCount}`);
+    setInnerHtml(userText, `Puntuación de la usuaria: ${userCount}`);
   }
 }
 
-function GameEnd() {
+function gameEnd() {
   if (mov === maxMov) {
     isGameEnded = true;
     battleBtn.classList.add('collapsed');
     resetBtn.classList.remove('collapsed');
     if (compCount > userCount) {
-      winnerText.innerHTML = `Ha ganado el ordenador :(`;
+      setInnerHtml(winnerText, `Ha ganado el ordenador :(`);
     } else if (compCount < userCount) {
-      winnerText.innerHTML = `Has ganado!!! :)`;
+      setInnerHtml(winnerText, `Has ganado!!! :)`);
     } else if (compCount === userCount) {
-      winnerText.innerHTML = `Empate!`;
+      setInnerHtml(winnerText, `Empate!`);
     }
+    setInnerHtml(resultText, '');
   }
 }
 
@@ -100,7 +107,7 @@ function handleBattleClick(e) {
     calculateBattle(compRaceNum, userRaceNum);
     mov++;
   }
-  GameEnd();
+  gameEnd();
   console.log(`mov=${mov}`);
 }
 
@@ -110,9 +117,9 @@ function handleResetClick(e) {
   userCount = 0;
   mov = 0;
   isGameEnded = false;
-  winnerText.innerHTML = '';
-  compText.innerHTML = '';
-  userText.innerHTML = '';
+  setInnerHtml(winnerText, '');
+  setInnerHtml(compText, '');
+  setInnerHtml(userText, '');
   battleBtn.classList.remove('collapsed');
   resetBtn.classList.add('collapsed');
 }
