@@ -1,3 +1,150 @@
+:root{
+    --font-tangerine: 'Tangerine', cursive;
+    --font-dm-serif-display: 'DM Serif Display', serif;
+    --font-gelasio: 'Gelasio', serif;
+    --font-old-standard-tt: 'Old Standard TT', serif;
+    --font-vidaloka: 'Vidaloka', serif;
+
+    --color-silver-chalice: #B0B0AEff;
+    --color-medium-champagne: #EFE0AAff;
+    --color-onyx: #434344ff;
+    --color-vegas-gold: #D7B76Dff;
+    --color-raisin-black: #2D2825ff;
+
+    font-family: var(--font-gelasio);
+    font-size: 1.5rem;
+    color: var(--color-raisin-black);
+}
+
 .collapsed {
     display: none;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    width: 100%;
+    background-color: var(--color-silver-chalice);
+}
+
+.header{
+width: 100%;
+padding-top: 50px;
+padding-bottom: 20px;
+}
+
+.header-h1{
+
+    font-family: var(--font-tangerine);
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header-h1::selection{
+    background-color: var(--color-vegas-gold);
+}
+
+.hero{
+    width: 250px;
+    height: 600px;
+    float: left;
+    margin-right: 40px;
+    background-image: url('../images/hero-3.jpg');
+    background-size: cover;
+    background-position: top center;
+}
+
+.main{
+    width: 50%;
+    padding: 50px;
+    background-color: var(--color-medium-champagne);
+    border: solid 5px var(--color-vegas-gold);
+}
+
+.explanation{
+
+}
+
+.explanation-text{
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+.explanation-text::selection {
+    background-color: var(--color-vegas-gold);
+  }
+
+.battle{
+
+}
+
+.battle-form{
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+}
+
+.battle-form-select{
+    color: var(--color-raisin-black);
+    font-family: var(--font-gelasio);
+    font-size: 0.8rem;
+    padding: 5px;
+    border: solid 2px var(--color-vegas-gold);
+    border-radius: 5px;
+    outline: none;
+    width: 60%;
+}
+
+.battle-form-select-option:hover{
+    background-color: var(--color-medium-champagne);
+}
+
+.battle-form-btn {
+    color: var(--color-raisin-black);
+    font-family: var(--font-gelasio);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 7px 15px;
+    background-color: var(--color-vegas-gold);
+    border: none;
+    border-radius: 5px;
+}
+
+.battle-form-btn:hover{
+    background-color: var(--color-silver-chalice);
+}
+
+.reset-btn {
+    background-color: var(--color-silver-chalice);
+}
+
+.reset-btn:hover{
+    background-color: var(--color-vegas-gold);
+}
+
+.battle-article {
+    line-height: 1.5;
+    padding-top: 20px;
+}
+
+.battle-text::selection{
+    background-color: var(--color-vegas-gold);
+}
+
+.battle-result{
+    color: var(--color-onyx);
+    font-weight: 700;
+}
+
+.battle-winner{
+    color: var(--color-onyx);
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 50px;
 }
