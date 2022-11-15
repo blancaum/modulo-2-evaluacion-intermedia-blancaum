@@ -5,40 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Gelasio:wght@400;500;600;700&family=Old+Standard+TT:wght@400;700&family=Tangerine:wght@400;700&family=Vidaloka&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>Juega a Los Anillos del Poder - Blanca Ubis Martínez - Módulo 2 Evaluación intermedia</title>
 </head>
 
-<body>
+<body class="body">
     <header class="header">
         <h1 class="header-h1">Los Anillos de Poder</h1>
     </header>
-    <main>
-        <section class="exp">
-            <p class="text-exp">La Tierra Media está en guerra! En ella lucharán razas leales a Sauron contra otras
+    <main class="main">
+        <div class="hero"></div>
+        <section class="explanation">
+            <p class="explanation-text">¡La Tierra Media está en guerra! En ella lucharán razas leales a Sauron contra
+                otras
                 bondadosas
                 que
                 no
                 quieren que el mal reine sobre sus tierras.</p>
-            <p class="text-user">Eres un jugador del ejército del bien, no olvides tu misión de ganar la batalla</p>
+            <p class="explanation-text">Eres un jugador del ejército del bien, no olvides tu misión de ganar la
+                batalla.</p>
         </section>
         <section class="battle">
-            <form class="js-battle-form" action="">
-                <select class="js-select">
-                    <option hidden value="0">Selecciona la raza con la que vas a jugar:</option>
-                    <option value="1">Pelosos</option>
-                    <option value="2">Sureños buenos</option>
-                    <option value="3">Enanos</option>
-                    <option value="4">Númenóreanos</option>
-                    <option value="5">Elfos</option>
+            <form class="battle-form js-battle-form" action="">
+                <select class="battle-form-select js-select">
+                    <option class="battle-form-select-option hidden value=" 0">Selecciona la raza con la que vas a
+                        jugar:</option>
+                    <option class="battle-form-select-option" value=" 1">Pelosos</option>
+                    <option class="battle-form-select-option" value=" 2">Sureños buenos</option>
+                    <option class="battle-form-select-option" value=" 3">Enanos</option>
+                    <option class="battle-form-select-option" value=" 4">Númenóreanos</option>
+                    <option class="battle-form-select-option" value=" 5">Elfos</option>
                 </select>
-                <button class="js-battle-btn">Batalla</button>
-                <button class="js-reset-btn collapsed">Reiniciar juego</button>
+                <button class="battle-form-btn js-battle-btn">Batalla</button>
+                <button class="battle-form-btn reset-btn js-reset-btn collapsed">Reiniciar juego</button>
             </form>
-            <p class="js-text-result">Comienza la batalla.</p>
-            <p class="js-user-count"></p>
-            <p class="js-comp-count"></p>
-            <p class="js-winner"></p>
+            <article class="battle-article">
+                <p class="battle-text battle-result js-text-result">Comienza la batalla.</p>
+                <p class="battle-text battle-count-user js-user-count"></p>
+                <p class="battle-text battle-count-comp js-comp-count"></p>
+                <p class="battle-text battle-winner js-winner"></p>
+            </article>
         </section>
     </main>
     <script src="./js/main.js"></script>
